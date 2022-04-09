@@ -1,0 +1,23 @@
+body
+{
+	font-size: 20px;
+	background-color: #E2E3FC;
+}
+.espaco
+{
+	padding: 5px;
+	margin:5px;
+}
+.foto
+{
+	height: 200px;
+	weight: 200px;
+	border-radius: 100%;
+}
+.icone
+{
+	height: 50px;
+	weight: 50px;
+	padding: 5px;
+	border-radius: 100%;
+}
