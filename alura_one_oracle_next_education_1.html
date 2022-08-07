@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica de programação I: crie programas com Javascript e HTML</title>
+    <script>
+        //Substituindo document.write por uma função mais curta e intuitiva
+        function mostra(frase){
+            frase = frase;
+            return document.write(frase);
+        }
+        function pulaLinha(){
+            return mostra("<br>");
+        }
+        alert("Alura - Projeto ONE: Oracle Next Education");
+        pulaLinha();
+        mostra(18+12);
+        pulaLinha();
+        var ano = 2022;
+        mostra("Talysson tem " + (ano-1996) + " anos");
+        pulaLinha();
+        var a, b, c, d, media = 0
+        a = 2;
+        b = 3;
+        c = 9;
+        d = 9;
+        media = ((a+b+c+d)/4);
+        mostra(media);
+        pulaLinha();
+        mostra(Math.round(media));
+        pulaLinha();
+        function digaOla(nome){
+            mostra("Olá " + nome);
+        }
+        digaOla("Talysson");
+        pulaLinha();
+        //Função mais "completa"
+        function digaOla_grande(nome){
+            var nome = nome;
+            return mostra("Olá " + nome);
+        }
+        digaOla_grande("Xavier");
+    </script>
+</head>
+<body>
+    <!-Isso é um comentário->
+    <h1>Lógica de programação I: crie programas com Javascript e HTML</h1>
+    <br>
+    <h2>Aula 1: Comece a programar hoje</h2>
+    <p>Também é possível utilizar o Javascript dentro das tags "body"</p>
+    <h2><script>document.write("Tentando usar document.write dentro de uma tag H2")</script></h2>
+</body>
+</html>
