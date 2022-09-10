@@ -21,6 +21,8 @@
         var x = 0;
         var y = 0;
         var i = 1;
+        var aux = 0;
+        /*
         while(x<400){
             while(y<400){
                 desenhaQuadrado(x,y,"green");
@@ -34,6 +36,20 @@
             y = 0;
         }
         x = x + 50;
+        }
+        */
+
+        for(x = 0; x < 400; x = x + 50){
+            for(y = aux; y < 400; y = y + 100){
+                desenhaQuadrado(x,y,"green");
+            }
+            i++;
+            if(i%2 === 0){
+                aux = 50;
+            }
+            else{
+                aux = 0;
+            }
         }
     </script>
 </body>
