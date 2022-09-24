@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de Interação</title>
+</head>
+<body>
+    <h1>Exercicío de Interação</h1>
+    <h4>Instruções</h4>
+    <ul>
+        <li>Botão esquerdo do mouse desenha círculo</li>
+        <li>Botão direito do mouse muda a cor do círculo</li>
+        <li>Segurar o botão "shift" aumenta o círculo a cada click</li>
+        <li>Segurar o botão "alt" dimnui o círculo a cada click</li>
+    </ul>
+    <canvas width="600" height="400"></canvas>
+    <script>
+        var tela = document.querySelector("canvas");
+        var pincel = tela.getContext("2d");
+        var cor = "blue"
+
+        pincel.fillStyle = "grey";
+        pincel.fillRect(0, 0, 600, 400);
+
+        var raio = 10;
+
+        function desenhaCirculo(evento){
+                var x = evento.pageX - tela.offsetLeft;
+                var y = evento.pageY - tela.offsetTop;
+                if (evento.shiftKey){
+                    raio = raio + 5;
+                }
+                if (evento.altKey){
+                    raio = raio - 5;
+                }
+                pincel.fillStyle = cor;
+                pincel.beginPath();
+                pincel.arc(x, y, raio, 0, 2 * 3.1415);
+                pincel.fill();
+                console.log(x + "," + y);
+            }
+
+        function mudarCor(){
+            if (cor === "blue"){
+                cor = "red"
+            }
+            else if (cor === "red"){
+                cor = "green";
+            }
+            else{
+                cor = "blue"
+            }
+            return false;
+        }
+
+        tela.oncontextmenu = mudarCor;
+        tela.onclick = desenhaCirculo;
+
+    </script>
+</body>
+</html>
